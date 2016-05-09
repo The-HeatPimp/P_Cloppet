@@ -1,0 +1,370 @@
+<body ng-controller="postController">
+	<!-- Navigation -->
+	<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+		<div class="container-fluid">
+			<!-- Brand and toggle get grouped for better mobile display -->
+			<div class="navbar-header page-scroll">
+				<button class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				</button>
+				<a  class="navbar-brand" href="">Perceval Cloppet</a>
+				<a ng-click='accessPanel()' ng-show="admin" class="navbar-brand">Administration</a>
+			</div>
+			<!-- Collect the nav links, forms, and other content for toggling -->
+			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+				<ul class="nav navbar-nav navbar-right">
+					<li id='dDown'>
+						<a ng-show="connected" class="dropdown-toggle" id="MenuRessources" type="button" data-toggle="dropdown">Ressources en ligne
+							<span class="caret"></span>
+						</a>
+						<ul class="dropdown-menu" role="menu" aria-labelledby="MenuRessources">
+							<li role="presentation"><a class="liDdown" role="menuitem" tabindex="-1" href="#">Droit</a></li>
+							<li role="presentation"><a class="liDdown" role="menuitem" tabindex="-1" href="#">Eco</a></li>
+							<li role="presentation"><a class="liDdown" role="menuitem" tabindex="-1" href="#">Management</a></li>
+						</ul>
+						
+					</li>
+					<li>
+						<!-- Bouton execution modal -->
+						<a ng-show="!connected" href=""  data-toggle="modal" data-target="#Connexion-form">
+							Se connecter
+						</a>
+						<a ng-click="signout()" ng-show="connected" href="">Se déconnecter</a>
+					</li>
+				</ul>
+			</div>
+			<!-- /.navbar-collapse -->
+		</div>
+		<!-- /.container -->
+	</nav>
+	<!-- Page Header -->
+	<!-- Set your background image for this header on the line below. -->
+	<header class="intro-header" style="background-image: url('images/home-bg.jpg')">
+		<a href="#haut"></a>
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+					<div class="site-heading">
+						<h1>Perceval Cloppet</h1>
+						<hr class="small">
+						<span class="subheading">Cours, exercices et corrigés</span>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+	</header>
+	<div id="line_H"></div>
+	<!-- Main Content -->
+	<div class="content_container container">
+		<div class="row">
+			
+			<div class="V_block col-xs-12 row">
+				<h1 class="page-title">Presentation</h1>
+				<div class="flex_V">
+					<div class="center-box col-xs-12 col-sm-6 col-md-5 col-lg-4">
+						<div class="box-resume">
+							<div class="center-top">
+								<img src="images/profile.jpg" alt="" class="img-responsive">
+							</div>
+							<ul>
+								<ul>
+									<li><h4>Perceval CLOPPET<h4></li>
+									<li><strong>Ville : </strong> 6 Place Villeboeuf
+									42100 Saint-Étienne - France</li>
+									<li><strong>Info : </strong> Permis B, 40 ans, célibataire</li>
+									<li><strong>Tel :</strong> 06 49 12 70 85</li>
+									<li><strong>mail :</strong> perceval-cloppet@bbox.fr</li>
+								</ul>
+							</ul>
+							<div class="center-bottom">
+								<button href="./files/CV Perceval CLOPPET- 2014.pdf" title="Download Resume" class="btn-center btn btn-default">Télécharger mon CV</button>
+							</div>
+						</div>
+					</div>
+					
+					<div class="V_center col-xs-12 col-sm-6 col-md-7 col-lg-8">
+						<div class="post-preview">
+							<hr>
+							<h3 class="post-subtitle">
+							Bio
+							</h3>
+							<hr>
+							<p class="post-meta">
+								Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+								tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+								quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+								consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+								cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+								proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+							</p>
+						</div>
+						<div class="post-preview">
+							<hr>
+							<h3 class="post-subtitle">
+							Relationnel
+							</h3>
+							<hr>
+							<ul class="spec-meta">
+								<li><p class="post-meta">Contact aisé avec tous niveaux hiérarchiques</p></li>
+								<li><p class="post-meta">Accompagnement des étudiants dans la
+								rédaction leurs mémoires (Master 1, Master 2)</p></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="marge-post post-preview">
+				<hr>
+				<h3 class="post-subtitle">
+				Experience
+				</h3>
+				<hr>
+				<p class="post-meta">
+					<div class="panel-group" id="accordion">
+						<div class="panel panel-default">
+							<div class="panel-heading">
+								<a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseSix">
+									<h4 class="panel-title"><strong>2009 &rarr; aujourd'hui :</strong> Enseignant vacataire</h4>
+								</a>
+							</div>
+							<div id="collapseSix" class="panel-collapse collapse">
+								<div class="panel-body">
+									<p>
+										J’ai donné des cours en mathématiques, français, gestion et finance dans les établissements suivants : Université de Saint-Etienne, Université Lumière Lyon 2, ESC Saint-Etienne, Institut de Commerce Lyonnais, Wesford, ICOGES.
+									</p>
+									<button class="unCollapser btn btn-default accordion-toggle collapsed" data-toggle="collapse" data-parent="#collapseTwo" href="#subCollapseSix">
+									Exemple de réalisation
+									</button>
+								</div>
+								<div id="subCollapseSix" class="panel-collapse collapse">
+									<div class="panel-body">
+										<p>Gestion et mise en place d’un projet de réorganisation du dépôt du
+											service CPPR (SAV) : création et réorganisation des emplacements physiques et informatiques, implantations de Mégalifts,
+										mise en place d’un inventaire permanent, des outils Kanban, poké yoké ainsi que d’une démarche Lean Production.</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						
+						
+						<div class="panel panel-default">
+							<div class="panel-heading">
+								<a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseFive">
+									<h4 class="panel-title"><strong>2007 &rarr; 2008 :</strong> Enseignement à l'étranger</h4>
+								</a>
+							</div>
+							<div id="collapseFive" class="panel-collapse collapse">
+								<div class="panel-body">
+									Voyage initiatique en Chine au cours duquel j’ai donné des cours en mathématiques, français, gestion et finance.
+								</div>
+							</div>
+						</div>
+						
+						<div class="panel panel-default">
+							<div class="panel-heading">
+								<a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseFour">
+									<h4 class="panel-title"><strong>Février 2006 &rarr; septembre 2006 : </strong> Rédaction d’un mémoire</h4>
+								</a>
+							</div>
+							<div id="collapseFour" class="panel-collapse collapse">
+								<div class="panel-body">
+									Recherches sur la compatibilité des concepts de Lean Production et de MTO ayant servi de support parmi d’autre à la décision de mise en oeuvre d’un projet Lean au sein de l’entreprise ETIC (42)
+								</div>
+							</div>
+						</div>
+						<div class="panel panel-default">
+							<div class="panel-heading">
+								<a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
+									<h4 class="panel-title"><strong>Septembre 2004 &rarr; Juin 2005 : </strong> Enseignant en communication et gestion commerciale</h4>
+								</a>
+							</div>
+							<div id="collapseThree" class="panel-collapse collapse">
+								<div class="panel-body">
+									Lycée Tézenas du Montcel – (42)
+								</div>
+							</div>
+						</div>
+						<div class="panel panel-default">
+							<div class="panel-heading">
+								<a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
+									<h4 class="panel-title"><strong>Septembre 2003 &rarr; août 2004 : </strong> Responsable du service SAV</h4>
+								</a>
+							</div>
+							<div id="collapseTwo" class="panel-collapse collapse">
+								<div class="panel-body">
+									<p>
+										Haulotte Group (Fabrication de Plateforme Elévatrice Mobile de Personne (PEMP) – (42)
+									</p>
+									<button class="unCollapser btn btn-default accordion-toggle collapsed" data-toggle="collapse" data-parent="#collapseTwo" href="#subCollapseTwo">
+									Exemple de réalisation
+									</button>
+								</div>
+								<div id="subCollapseTwo" class="panel-collapse collapse">
+									<div class="panel-body">
+										<p>
+											Gestion et mise en place d’un projet de réorganisation du dépôt du
+											service CPPR (SAV) : création et réorganisation des emplacements physiques et informatiques, implantations de Mégalifts,
+											mise en place d’un inventaire permanent, des outils Kanban, poké yoké ainsi que d’une démarche Lean Production.
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="panel panel-default">
+							<div class="panel-heading">
+								<a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+									<h4 class="panel-title"><strong>Février 1999 &rarr; août 2003 : </strong> Responsable marketing / administration des ventes</h4>
+								</a>
+							</div>
+							<div id="collapseOne" class="panel-collapse collapse">
+								<div class="panel-body">
+									Bauzer Industrie (Emboutissage – tôlerie fine) – (42)
+								</div>
+							</div>
+						</div>
+					</div>
+				</p>
+			</div>
+			<div class="marge-post post-preview">
+				<hr>
+				<h3 class="post-subtitle">
+				Formation
+				</h3>
+				<hr>
+				<div class="F_list">
+					<ul>
+						<li><h4>2006</h4><p><strong>Master 2</strong> mention « Economie Quantitative et Décision
+							Stratégique », spécialité « Etudes et Recherche en Stratégie » -<i>
+						Université Lumière Lyon 2</i></p></li>
+						<li><h4>2005</h4><p> <strong>Maîtrise</strong> en sciences de gestion - <i>IUP Management,
+						Université Jean Monnet – Saint-Étienne</i></p></li>
+						<li><h4>2004</h4><p> <strong>Licence</strong> en sciences de gestion - <i>IUP Management,
+						Université Jean Monnet – Saint-Étienne</i></p></li>
+						<li><h4>1996 – 1998</h4><p> <strong>Niveau DECF</strong> : 6UV / 7UV obtenues</p></li>
+						<li><h4>1996</h4> <p><strong>DPECF</strong></p></li>
+						<li><h4>1995</h4> <p><strong>BTS</strong> en Action Commerciale</p></li>
+					</ul>
+				</div>
+			</div>
+			<div class="marge-post post-preview">
+				<hr>
+				<h3 class="post-subtitle">
+				Compétences
+				</h3>
+				<hr>
+				<p class="post-meta"></p>
+				<div class="C_list row">
+					<div class="Cl col-xs-12 col-sm-6 col-lg-3">
+						<div class="in_Cl">
+							<h4>Environnement
+							financier</h4>
+							<ul>
+								<li> Comptabilité</li>
+								<li> Gestion</li>
+								<li> Finance</li>
+								<li> Contrôle de gestion</li>
+							</ul>
+						</div>
+					</div>
+					<div class="Cl col-xs-12 col-sm-6 col-lg-3">
+						<div class="in_Cl">
+							<h4>Environnement
+							économique</h4>
+							<ul>
+								<li> Economie</li>
+								<li> Management</li>
+								<li> Droit</li>
+							</ul>
+						</div>
+					</div>
+					<div class="Cl col-xs-12 col-sm-6 col-lg-3">
+						<div class="in_Cl">
+							<h4>Environnement
+							industriel</h4>
+							<ul>
+								<li> Logistique</li>
+								<li> Achat</li>
+								<li> Gestion industrielle</li>
+								<li> Gestion de production</li>
+							</ul>
+						</div>
+					</div>
+					<div class="Cl col-xs-12 col-sm-6 col-lg-3">
+						<div class="in_Cl">
+							<h4>Environnement
+							stratégique</h4>
+							<ul>
+								<li> Marketing</li>
+								<li> Stratégie</li>
+								<li> Communication</li>
+							</ul>
+						</div></div>
+						<div class="botCl Cl col-xs-12">
+							<div class="in_Cl">
+								<h4>Informatique</h4>
+								<ul>
+									<li> Systèmes d’exploitations : XP / vista / Seven/ windows 8 et mac OS (A partir de Lion)</li>
+									<li> Logiciels : Outlook, Word, Excel, Access, PowerPoint, MS Project, Acrobat Professional</li>
+									<li> Etude – réflexion – suivi – mise en place de projets informatiques divers</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="marge-post post-preview">
+					<hr>
+					<h3 class="post-subtitle">
+					Centres d'intérêts
+					</h3>
+					<hr>
+					<ul class="spec-meta">
+						<li><p class="post-meta">Bonnes connaissances de l’histoire de la
+							chine et de ses enjeux économiques et
+						sociaux</p></li>
+						<li><p class="post-meta">Presse nationale et spécialisée (économie,
+						stratégie, politique…)</p></li>
+						<li><p class="post-meta">Passionné d’histoire</p></li>
+						<li><p class="post-meta">Passionné par les nouvelles technologies</p></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		
+		<hr>
+		<!-- jQuery -->
+		<script src="javascripts/jquery.min.js"></script>
+		<!-- Bootstrap Core JavaScript -->
+		<script src="javascripts/bootstrap.min.js"></script>
+		<!-- Custom Theme JavaScript -->
+		<script src="javascripts/clean-blog.js"></script>
+		<!-- Modal -->
+		<div  class="modal fade" id="Connexion-form" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+						<h4 class="modal-title" id="myModalLabel">Connectez vous</h4>
+						<div class="col-md-10 col-md-offset-1">
+							<form name="userForm" ng-submit="signin()">
+								<div class="form-group">
+									<label>Login</label>
+									<input type="text" name="name" class="form-control" ng-model="user.name">
+									
+								</div>
+								<div class="form-group">
+									<label>Mot de passe</label>
+									<input type="password" name="password" class="form-control" ng-model="user.password">
+								</div>
+								<span ng-show="message">{{message}}</span>
+								<button ng-click="uploadAndClose()" type="submit" class="btn btn-primary">Connexion</button>
+							</form>
+						</div>
+					</div>
+					</div><!-- /.modal-content -->
+					</div><!-- /.modal-dialog -->
+					</div><!-- /.modal -->
+				</body>
